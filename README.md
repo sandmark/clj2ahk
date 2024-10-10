@@ -4,20 +4,20 @@ Transpiles Clojure map to AHK script.
 
 ## Usage
 
-    $ clojure -Sdeps '{io.github.sandmark/clj2ahk {:git/url "https://github.com/sandmark/clj2ahk" :git/sha "..."}}' -M clj2ahk.core \
-    '{:opts  ["#UseHook"
-              "#MaxHotkeysPerInterval 1000"
-              "#SingleInstance force"
-              "!Insert::Suspend"
-              "!Home::Pause"
-              "!End::Reload"]
-      :games [{:window      "ahk_exe RefindSelf.exe"
-               :repeat-keys [{:trigger :v :key :e :interval 10}]}
-              {:window      "ahk_exe sekiro.exe"
-               :keymaps     {:PgUp :Numpad7
-                             :PgDn :NumPad9
-                             :End  :NumPadDot}
-               :repeat-keys [{:trigger :t :key :e}]}]}'
+    $ clojure -Sdeps '{:deps {io.github.sandmark/clj2ahk {:git/url "https://github.com/sandmark/clj2ahk" :git/sha "d7c7caa6f0a2b2309937dd93550e5f7f15fd2574"}}}' -M -m clj2ahk.core '
+    {:opts  ["#UseHook"
+             "#MaxHotkeysPerInterval 1000"
+             "#SingleInstance force"
+             "!Insert::Suspend"
+             "!Home::Pause"
+             "!End::Reload"]
+     :games [{:window      "ahk_exe RefindSelf.exe"
+              :repeat-keys [{:trigger :v :key :e :interval 10}]}
+             {:window      "ahk_exe sekiro.exe"
+              :keymaps     {:PgUp :Numpad7
+                            :PgDn :NumPad9
+                            :End  :NumPadDot}
+              :repeat-keys [{:trigger :t :key :e}]}]}'
 
 ## License
 
