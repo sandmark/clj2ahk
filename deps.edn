@@ -1,0 +1,19 @@
+{:paths ["src" "resources"]
+ :deps  {org.clojure/clojure {:mvn/version "1.12.0"}
+         selmer/selmer       {:mvn/version "1.12.61"}}
+ :aliases
+ {:run-m {:main-opts ["-m" "clj2ahk.core"]}
+  :run-x {:ns-default clj2ahk.core
+          :exec-fn    transpile}
+  :dev   {:extra-paths ["dev/src" "dev/resources" "test" "spec"]
+          :extra-deps  {nubank/matcher-combinators  {:mvn/version "3.9.1"}
+                        nubank/mockfn               {:mvn/version "0.7.0"}
+                        org.clojure/tools.namespace {:mvn/version "1.5.0"}
+                        orchestra/orchestra         {:mvn/version "2021.01.01-1"}}}
+  :build {:deps       {io.github.clojure/tools.build {:mvn/version "0.10.5"}
+                       slipset/deps-deploy           {:mvn/version "0.2.2"}}
+          :ns-default build}
+  :test  {:extra-paths ["test"]
+          :extra-deps  {org.clojure/test.check {:mvn/version "1.1.1"}
+                        io.github.cognitect-labs/test-runner
+                        {:git/tag "v0.5.1" :git/sha "dfb30dd"}}}}}
