@@ -4,7 +4,7 @@ Transpiles Clojure map to AHK script.
 
 ## Usage
 
-    $ clojure -Sdeps '{:deps {io.github.sandmark/clj2ahk {:git/url "https://github.com/sandmark/clj2ahk" :git/sha "d7c7caa6f0a2b2309937dd93550e5f7f15fd2574"}}}' -M -m clj2ahk.core '
+    $ clojure -Sdeps '{:deps {io.github.sandmark/clj2ahk {:git/url "https://github.com/sandmark/clj2ahk" :git/sha "f8b6142444f270f5ae48da56db14ecfd1a4adcbe"}}}' -M -m clj2ahk.core '
     {:opts  ["#UseHook"
              "#MaxHotkeysPerInterval 1000"
              "#SingleInstance force"
