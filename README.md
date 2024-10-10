@@ -12,7 +12,7 @@ Transpiles Clojure map to AHK script.
              "!Home::Pause"
              "!End::Reload"]
      :games [{:window      "ahk_exe RefindSelf.exe"
-              :repeat-keys [{:trigger :v :key :e :interval 10}]}
+              :repeat-keys [{:trigger "C-e" :key :e :interval 10}]}
              {:window      "ahk_exe sekiro.exe"
               :keymaps     {:PgUp :Numpad7
                             :PgDn :NumPad9
